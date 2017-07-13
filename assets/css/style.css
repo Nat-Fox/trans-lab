@@ -7,7 +7,7 @@ body {
 .logo-ini {
     width: 130px;
     height: 133px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .title-home {
@@ -18,7 +18,7 @@ body {
 .form-style {
     background-color: #ffffff;
     width: 90%;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 
@@ -74,4 +74,43 @@ textarea.materialize-textarea {
 i.tiny {
     font-size: 1.4rem;
     width: 8%;
+}
+
+.icon-form {
+    color: grey;
+}
+
+.input-form {
+    margin-left: 10px;
+}
+
+
+/* Postiion por defecto de los placeholder del input */
+
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+    margin-left: 20px;
 }

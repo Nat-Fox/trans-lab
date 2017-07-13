@@ -25,22 +25,28 @@
             <form class="col s12">
                 <div class="row form-style">
                     <div class="input-field col s12">
-                        <input id="correo" type="text" class="validate">
-                        <label for="correo">
-                            <i class="tiny material-icons">perm_identity</i>
-                            <span>Correo electrónico</span>
-                        </label>
+                        <div class="row">
+                            <div class="col s1">
+                                <i class="small material-icons icon-form">perm_identity</i>
+                            </div>
+                            <div class="col s11">
+                                <input id="input-email" type="email" class="validate input-form validar-input" placeholder="Correo electrónico">
+                            </div>
+                        </div>
                     </div>
                     <div class="input-field col s12">
-                        <input id="password" type="text" class="validate">
-                        <label for="password">
-                            <i class="tiny material-icons">lock_outline</i> 
-                            <span>Contraseña</span>                            
-                        </label>
+                        <div class="row">
+                            <div class="col s1">
+                                <i class="small material-icons icon-form">lock_outline</i>
+                            </div>
+                            <div class="col s11">
+                                <input id="pass" type="password" class="validate input-pass validar-input" placeholder="Contraseña">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <a class="waves-effect waves-light btn-large btn-ini">INICIAR SESIÓN</a>
+                <a class="waves-effect waves-light btn-large btn-ini" id="btn-ini">INICIAR SESIÓN</a>
                 <div class="row">
                     <div class="input-field col s12">
                         <p class="remember white-text">¿Olvidaste tu contraseña?</p>
