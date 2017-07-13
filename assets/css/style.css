@@ -1,0 +1,77 @@
+/* YeyeYeee código aquí */
+
+body {
+    background-color: #3d4040;
+}
+
+.logo-ini {
+    width: 130px;
+    height: 133px;
+    margin-top: 80px;
+}
+
+.title-home {
+    color: #f5a700;
+    font-weight: bold;
+}
+
+.form-style {
+    background-color: #ffffff;
+    width: 90%;
+    margin-top: 30px;
+}
+
+
+/* Estilos por defecto de los input */
+
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+
+.btn-ini {
+    width: 90%;
+    background-color: #f5a700;
+    margin-top: -26px;
+    color: #3b466e;
+}
+
+.remember {
+    margin-left: 10px;
+}
+
+.white-text {
+    color: white;
+}
+
+.register {
+    color: #f5a700;
+    cursor: pointer;
+}
+
+i.tiny {
+    font-size: 1.4rem;
+    width: 8%;
+}
