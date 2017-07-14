@@ -41,7 +41,11 @@ $(document).ready(function() {
 
                 // Llenar el select de saldo.html
                 cards.forEach(function(num) {
+                    // Llamo a los numeros de tarjetas que han sido ingresados
                     console.log('NUM', num);
+                    $('#selectid-tar').append(`
+                        <option value="">${num}</option>                 
+                    `)
                 })
 
             })
@@ -117,6 +121,7 @@ $(document).ready(function() {
             })
             .done(function(response) {
                 console.log('RESPONSE', response.saldoTarjeta);
+                localStorage.saldoTarjeta = response.saldoTarjeta;
             })
             .fail(function() {
                 alert('La tarjeta ingresada no es válida');
