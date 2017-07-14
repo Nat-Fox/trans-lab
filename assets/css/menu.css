@@ -2,7 +2,6 @@
 
 body {
     background-color: #dcdcde;
-    overflow-y: hidden;
 }
 
 .nav-menu {
@@ -52,10 +51,11 @@ body {
     color: black;
 }
 
-.btn:hover,
+
+/* .btn:hover,
 .btn-large:hover {
     background-color: white;
-}
+} */
 
 
 /* input perfil */
@@ -78,4 +78,5 @@ body {
     margin-bottom: 10px;
     width: 85%;
     background-color: white;
+    color: black
 }

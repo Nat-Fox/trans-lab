@@ -76,3 +76,20 @@ body {
     background-color: white;
     margin-left: 2px;
 }
+
+.container-saldo {
+    padding-top: 50px;
+}
+
+.title-card-saldo {
+    background-color: #3d4040;
+    color: white;
+    height: 70px;
+    width: 110%;
+    font-size: 30px;
+}
+
+.title-info-saldo {
+    background-color: #ffa600;
+    width: 110%;
+}
