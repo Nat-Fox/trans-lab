@@ -6,7 +6,7 @@ $(document).ready(function() {
     $('select').material_select();
 
     $('#correo-ingresado').append(`${localStorage.correo}`);
-    console.log('LS', localStorage);
+    console.log('LS', localStorage.correo);
 });
 
 //función para validar el correo
@@ -20,7 +20,7 @@ function validarCorreo(correo) {
 //función que valida la contraseña
 function password(pass) {
     var largoPass = pass.length;
-    if (largoPass < 9) {
+    if (largoPass > 8) {
         return true;
     }
 }
@@ -59,7 +59,7 @@ $('#btn-ini').on('click', function() {
     // Validaciones para la contraseña
     if (pass !== '') {
         if (password(pass)) {
-            $('#error-clave').append('<div class="error-span">Debes ingresar una contraseña más segura.</div>');
+            $('#error-clave').append('<div class="error-span">Tu contraseña debe tener a lo más 8 números.</div>');
         }
         if (!contenidoAlfa(pass)) {
             $('#error-clave').append('<div class="error-span">Solo se permiten números.</div>');

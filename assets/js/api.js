@@ -13,6 +13,9 @@ $(document).ready(function() {
         });
     }
 
+    $('#correo-ingresado').append(`${localStorage.correo}`);
+    console.log('LS', localStorage.correo);
+
     // Evento para obtener el valor del numero de tarjeta agregado
     $('#btn-agregar').on('click', function() {
         var valueTar = $('.input-perfil').val();
@@ -37,17 +40,9 @@ $(document).ready(function() {
                 localStorage.cards = JSON.stringify(cards);
 
                 // Llenar el select de saldo.html
-                // cards.forEach(function(num) {
-                //     //console.log('NUM', num);
-                //     var option = 1;
-                //     $('#select-option').append(`
-                //         <select>
-                //             <option value="" disabled selected>Choose your option</option>
-                //             <option value="${option}">${num}</option>                 
-                //         </select>
-                //     `);
-                //     option++;
-                // })
+                cards.forEach(function(num) {
+                    console.log('NUM', num);
+                })
 
             })
             .fail(function() {
@@ -60,6 +55,8 @@ $(document).ready(function() {
 
     // Evento para el boton de saldo que comprueba si el número es válido
     $('#btn-saldo').on('click', function() {
+        // Valor seleccionado por idf
+
         var numTarjetaSaldo = $('.input-number-saldo').val();
         //console.log('valor de tarjeta apra el saldo', numTarjetaSaldo);
         // Segunda llamada a la API para confirmar que la tarjeta por la que se consulta el saldo es válida 
@@ -88,6 +85,11 @@ $(document).ready(function() {
                 var saldoObtenido = responseTwo.saldoTarjeta;
                 // Saldo de la tarjeta
                 console.log('SALDO', saldoObtenido);
+
+
+                var tajertaEscogida = document.getElementById('selectid').options[document.getElementById('selectid').selectedIndex].text;
+                console.log('TARJETA ESCODIGA', tajertaEscogida)
+
             })
             .fail(function() {
                 alert('La tarjeta ingresada no es válida');
@@ -102,7 +104,30 @@ $(document).ready(function() {
     $('#btn-calcular').on('click', function() {
         console.log('click calcular');
         var texto = document.getElementById('selectid').options[document.getElementById('selectid').selectedIndex].text;
-        console.log(texto)
+        console.log(texto);
+
+        // Valor seleccionado por id
+        var varResta = document.getElementById('select-resta').options[document.getElementById('select-resta').selectedIndex].text;
+        console.log('VALOR SELECT PARA RESTA', parseInt(varResta));
+
+        $.ajax({
+                url: `http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${varResta}`,
+                type: 'GET',
+                datatype: 'JSON',
+            })
+            .done(function(response) {
+                console.log('RESPONSE', response.saldoTarjeta);
+            })
+            .fail(function() {
+                alert('La tarjeta ingresada no es válida');
+            })
+            .always(function() {
+                console.log('complete')
+            });
+
+        var horAlto = 2120 - 740;
+        var horMed = 2120 - 680;
+        var horBaj = 2120 - 640;
 
         if (texto === 'Horario Alto') {
             $('#number-bip-for-horario').append(
@@ -114,7 +139,7 @@ $(document).ready(function() {
                                     <span class="card-title">SALDO TOTAL</span>
                                 </div>
                                 <div class="card-content title-info-horario">
-                                    <span class="card-title">$740</span>
+                                    <span class="card-title">$${horAlto} </span>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +156,7 @@ $(document).ready(function() {
                                     <span class="card-title">SALDO TOTAL</span>
                                 </div>
                                 <div class="card-content title-info-horario">
-                                    <span class="card-title">$680</span>
+                                    <span class="card-title">$${horMed}</span>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +173,7 @@ $(document).ready(function() {
                                     <span class="card-title">SALDO TOTAL</span>
                                 </div>
                                 <div class="card-content title-info-horario">
-                                    <span class="card-title">$640</span>
+                                    <span class="card-title">$${horBaj}</span>
                                 </div>
                             </div>
                         </div>
@@ -157,5 +182,9 @@ $(document).ready(function() {
             )
         }
     });
+
+
+    // Calcular el saldo de la tarjeta escogida en el select
+
 
 })
