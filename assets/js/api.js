@@ -98,4 +98,64 @@ $(document).ready(function() {
     })
 
 
+    // Evento para realizar el calculo de costo del viaje mas saldo restante
+    $('#btn-calcular').on('click', function() {
+        console.log('click calcular');
+        var texto = document.getElementById('selectid').options[document.getElementById('selectid').selectedIndex].text;
+        console.log(texto)
+
+        if (texto === 'Horario Alto') {
+            $('#number-bip-for-horario').append(
+                `<div class="container container-horario">
+                    <div class="row center">
+                        <div class="col s12">
+                            <div class="card" id="container-horario">
+                                <div class="card-content title-card-horario">
+                                    <span class="card-title">SALDO TOTAL</span>
+                                </div>
+                                <div class="card-content title-info-horario">
+                                    <span class="card-title">$740</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+            )
+        } else if (texto === 'Horario Medio') {
+            $('#number-bip-for-horario').append(
+                `<div class="container container-horario">
+                    <div class="row center">
+                        <div class="col s12">
+                            <div class="card" id="container-horario">
+                                <div class="card-content title-card-horario">
+                                    <span class="card-title">SALDO TOTAL</span>
+                                </div>
+                                <div class="card-content title-info-horario">
+                                    <span class="card-title">$680</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+            )
+        } else if (texto === 'Horario Bajo') {
+            $('#number-bip-for-horario').append(
+                `<div class="container container-horario">
+                    <div class="row center">
+                        <div class="col s12">
+                            <div class="card" id="container-horario">
+                                <div class="card-content title-card-horario">
+                                    <span class="card-title">SALDO TOTAL</span>
+                                </div>
+                                <div class="card-content title-info-horario">
+                                    <span class="card-title">$640</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+            )
+        }
+    });
+
 })

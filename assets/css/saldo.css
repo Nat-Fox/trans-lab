@@ -77,11 +77,13 @@ body {
     margin-left: 2px;
 }
 
-.container-saldo {
+.container-saldo,
+.container-horario {
     padding-top: 50px;
 }
 
-.title-card-saldo {
+.title-card-saldo,
+.title-card-horario {
     background-color: #3d4040;
     color: white;
     height: 70px;
@@ -89,7 +91,8 @@ body {
     font-size: 30px;
 }
 
-.title-info-saldo {
+.title-info-saldo,
+.title-info-horario {
     background-color: #ffa600;
     width: 110%;
 }

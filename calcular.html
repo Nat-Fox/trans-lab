@@ -52,11 +52,11 @@
             <div class="col s12">
                 <div class="col s6 option">
 
-                    <select class="icons">               
+                    <select class="icons" id="selectid">               
                         <option value="" disabled selected>Choose your option</option>
-                        <option value="" class="left circle">Horario Alto</option>
-                        <option value="" class="left circle">Horario Medio</option>
-                        <option value="" class="left circle">Horario Bajo</option>
+                        <option value="740" id="hora-alto" class="left">Horario Alto</option>
+                        <option value="680" id="hora-medio" class="left">Horario Medio</option>
+                        <option value="640" id="hora-bajo" class="left">Horario Bajo</option>
                     </select>
                 </div>
                 <div class="col s6 option">
@@ -70,17 +70,31 @@
             </div>
 
 
-
-
         </div>
 
     </div>
 
     <div class="center">
-        <a class="waves-effect waves-light btn btn-saldo">CALCULAR</a>
+        <a class="waves-effect waves-light btn btn-calcular" id="btn-calcular">CALCULAR</a>
     </div>
 
 
+    <div class="col s12" id="number-bip-for-horario">
+        <!-- <div class="container container-horario">
+            <div class="row center">
+                <div class="col s12">
+                    <div class="card" id="container-horario">
+                        <div class="card-content title-card-horario">
+                            <span class="card-title">SALDO TOTAL</span>
+                        </div>
+                        <div class="card-content title-info-horario">
+                            <span class="card-title"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -89,6 +103,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
     <!-- JS -->
+    <script type="text/javascript" src="assets/js/api.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 
