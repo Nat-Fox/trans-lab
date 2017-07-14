@@ -2,6 +2,7 @@
 
 body {
     background-color: #dcdcde;
+    overflow-y: hidden;
 }
 
 .nav-menu {
@@ -9,7 +10,7 @@ body {
 }
 
 .buttons-option {
-    margin-top: 150px
+    margin-top: 120px
 }
 
 .btn-option {
@@ -32,4 +33,48 @@ body {
     width: 24px;
     color: rgba(0, 0, 0, 0.54);
     color: #ffa600;
+}
+
+.card-profile {
+    margin-top: 0;
+    background-color: #ffa600;
+}
+
+.img-profile {
+    margin-top: 5px;
+    width: 50%;
+    height: 50%;
+}
+
+.btn-mail {
+    width: 80%;
+    background-color: white;
+}
+
+.btn:hover,
+.btn-large:hover {
+    background-color: white;
+}
+
+
+/* input perfil */
+
+.form-style {
+    background-color: #dcdcde;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.btn-agregar {
+    width: 85%;
+    background-color: #f5a700;
+    margin-top: -26px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.btn-bip-number {
+    margin-bottom: 10px;
+    width: 85%;
+    background-color: white;
 }

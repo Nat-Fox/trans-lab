@@ -1,0 +1,78 @@
+/* icon color */
+
+.side-nav li>a>i,
+.side-nav li>a>[class^="mdi-"],
+.side-nav li>a li>a>[class*="mdi-"],
+.side-nav li>a>i.material-icons {
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 32px 0 0;
+    width: 24px;
+    color: rgba(0, 0, 0, 0.54);
+    color: #ffa600;
+}
+
+body {
+    background-color: #dcdcde;
+}
+
+.nav-menu {
+    background-color: #3d4040;
+}
+
+.form-style {
+    background-color: #dcdcde;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.row .col.s12 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.select-option {
+    background-color: white;
+}
+
+.select-wrapper input.select-dropdown {
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: transparent;
+    outline: none;
+    height: 1rem;
+    line-height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    display: block;
+    margin-top: 10px;
+}
+
+.btn-saldo {
+    background-color: #ffa600;
+}
+
+
+/* Estilos calcular */
+
+.row.form-calcu {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-top: 50px;
+}
+
+.row .col.s6.option {
+    width: 50%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    background-color: white;
+    margin-left: 2px;
+}

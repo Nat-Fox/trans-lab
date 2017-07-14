@@ -12,7 +12,7 @@
     <!-- More icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- CSS -->
-    <link href="assets/css/menu.css" rel="stylesheet">
+    <link href="assets/css/saldo.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,22 +38,47 @@
         </div>
     </nav>
 
-    <!-- opciones para el usuario -->
-    <div class="row buttons-option center">
-        <div class="s12">
-            <a class="waves-effect waves-light btn-large btn-ini btn-option">VER SALDO</a>
+
+    <div class="container">
+        <div class="row form-calcu">
+            <div class="col s12">
+                <div class="col s6">
+                    <label for="">Tarifa</label>
+                </div>
+                <div class="col s6">
+                    <label for="">Tarjeta</label>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="col s6 option">
+
+                    <select class="icons">               
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" class="left circle">Horario Alto</option>
+                        <option value="" class="left circle">Horario Medio</option>
+                        <option value="" class="left circle">Horario Bajo</option>
+                    </select>
+                </div>
+                <div class="col s6 option">
+                    <select class="icons">                
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" class="left circle">example 1</option>
+                        <option value="" class="left circle">example 2</option>
+                        <option value="" class="left circle">example 3</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+
         </div>
-        <div class="s12">
-            <a class="waves-effect waves-light btn-large btn-ini btn-option">CALCULAR TARIFA</a>
-        </div>
-        <div class="s12">
-            <a class="waves-effect waves-light btn-large btn-ini btn-option btn-perfil" id="btn-perfil">PERFIL</a>
-        </div>
-        <div class="s12">
-            <a class="waves-effect waves-light btn-large btn-ini btn-option">PREGUNTAS FRECUENTES</a>
-        </div>
+
     </div>
 
+    <div class="center">
+        <a class="waves-effect waves-light btn btn-saldo">CALCULAR</a>
+    </div>
 
 
 

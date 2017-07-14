@@ -1,0 +1,39 @@
+/* estilos para preguntas frecuentes */
+
+body {
+    background-color: #dcdcde;
+}
+
+.nav-menu {
+    background-color: #3d4040;
+}
+
+.test {
+    background-color: #ffa600;
+    height: 250px;
+}
+
+.title-question {
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    background-color: #ffa600;
+    height: 100px;
+    padding-top: 60px;
+}
+
+
+/* icon color */
+
+.side-nav li>a>i,
+.side-nav li>a>[class^="mdi-"],
+.side-nav li>a li>a>[class*="mdi-"],
+.side-nav li>a>i.material-icons {
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 32px 0 0;
+    width: 24px;
+    color: rgba(0, 0, 0, 0.54);
+    color: #ffa600;
+}
