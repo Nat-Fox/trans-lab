@@ -113,3 +113,8 @@ textarea.materialize-textarea {
     transition: all 0.3s;
     margin-left: 20px;
 }
+
+.error-span {
+    margin-top: 10px;
+    color: grey;
+}

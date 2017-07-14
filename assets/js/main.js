@@ -5,6 +5,8 @@ $(document).ready(function() {
     // Para el funcionamiento del select
     $('select').material_select();
 
+    $('#correo-ingresado').append(`${localStorage.correo}`);
+    console.log('LS', localStorage);
 });
 
 // FALTA REMOVER LOS MENSAJES DE ERROR
@@ -34,8 +36,15 @@ function contenidoAlfa(data) {
     }
 }
 
-$('#btn-ini').on('click', function() {
+function removeAll() {
+    $('#error-correo').empty();
+    console.log('correo', $('#error-correo'));
+    $('#error-clave').empty();
+}
 
+
+$('#btn-ini').on('click', function() {
+    removeAll();
     // Valores ingresados por el usuario
     var correo = $('#input-email').val();
     console.log('correo', correo);
@@ -43,23 +52,23 @@ $('#btn-ini').on('click', function() {
     // Validaciones para el correo
     if (correo !== '') {
         if (validarCorreo(correo)) {
-            $('#error-correo').parent().append('<div>Ingresa un correo valido. Ejem: name@domain.com</div>');
+            $('#error-correo').append('<div class="error-span">Ingresa un correo valido. Ejem: name@domain.com</div>');
         }
     } else {
-        $('#error-correo').parent().append('<div>Debes ingresar tu correo</div>');
+        $('#error-correo').append('<div class="error-span">Debes ingresar tu correo</div>');
     }
 
 
     // Validaciones para la contraseña
     if (pass !== '') {
         if (password(pass)) {
-            $('#error-clave').parent().append('<div>Debes ingresar una contraseña más segura.</div>');
+            $('#error-clave').append('<div class="error-span">Debes ingresar una contraseña más segura.</div>');
         }
         if (!contenidoAlfa(pass)) {
-            $('#error-clave').parent().append('<div>Solo se permiten números.</div>');
+            $('#error-clave').append('<div class="error-span">Solo se permiten números.</div>');
         }
     } else {
-        $('#error-clave').parent().append('<div>Debes ingresar tu contraseña</div>');
+        $('#error-clave').append('<div class="error-span">Debes ingresar tu contraseña</div>');
     }
 
     // Si todo esta correcto se limpia el formulario
@@ -76,14 +85,14 @@ $('#btn-ini').on('click', function() {
 //var email = document.getElementById('input-email').value;
 
 
-$('#btn-perfil').on('click', function() {
-    console.log('click');
-    console.log(localStorage.correo);
-    $('#correo-ingresado').append(`<a class="btn btn-ini btn-mail" id="correo-ingresado">${localStorage.correo}</a`);
-    //$(location).attr('href', 'perfil.html');
+// $('#btn-perfil').on('click', function() {
+//     console.log('click');
+//     console.log(localStorage.correo);
+//     //$('#correo-ingresado').append(`<a class="btn btn-ini btn-mail" id="correo-ingresado">${localStorage.correo}</a`);
+//     //$(location).attr('href', 'perfil.html');
 
 
-});
+// });
 
 // var element = document.querySelector(".btn-perfil");
 // element.addEventListener('submit', function() {
