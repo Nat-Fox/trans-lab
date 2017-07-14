@@ -21,7 +21,7 @@ $(document).ready(function() {
         var valueTar = $('.input-perfil').val();
 
         $.ajax({
-                url: `http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${valueTar}`,
+                url: `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${valueTar}`,
                 type: 'GET',
                 datatype: 'JSON',
             })
@@ -65,7 +65,7 @@ $(document).ready(function() {
         //console.log('valor de tarjeta apra el saldo', numTarjetaSaldo);
         // Segunda llamada a la API para confirmar que la tarjeta por la que se consulta el saldo es válida 
         $.ajax({
-                url: `http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${numTarjetaSaldo}`,
+                url: `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${numTarjetaSaldo}`,
                 type: 'GET',
                 datatype: 'JSON',
             })
@@ -115,7 +115,7 @@ $(document).ready(function() {
         console.log('VALOR SELECT PARA RESTA', parseInt(varResta));
 
         $.ajax({
-                url: `http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${varResta}`,
+                url: `https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${varResta}`,
                 type: 'GET',
                 datatype: 'JSON',
             })
