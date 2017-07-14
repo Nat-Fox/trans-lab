@@ -58,7 +58,7 @@ $('#btn-ini').on('click', function() {
 
     // Validaciones para la contraseña
     if (pass !== '') {
-        if (password(pass)) {
+        if (!password(pass)) {
             $('#error-clave').append('<div class="error-span">Tu contraseña debe tener a lo más 8 números.</div>');
         }
         if (!contenidoAlfa(pass)) {
