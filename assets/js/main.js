@@ -9,9 +9,6 @@ $(document).ready(function() {
     console.log('LS', localStorage);
 });
 
-// FALTA REMOVER LOS MENSAJES DE ERROR
-
-
 //función para validar el correo
 function validarCorreo(correo) {
     var expRegCorreo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
